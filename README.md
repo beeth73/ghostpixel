@@ -28,7 +28,7 @@ GhostPixel hides a text message inside the pixels of an image, and extracts it a
 | Name | Roll No. | GitHub |
 |---|---|---|
 | Bhushan Ladgaonkar | 10611 | [@Beeth73](https://github.com/Beeth73) |
-| Sakshi | 10895 | [sakshi84659-dev](https:github.com/sakshi84659-dev) |
+| Sakshi | 10895 | [@sakshi84659-dev](https:github.com/sakshi84659-dev) |
 
 ---
 
