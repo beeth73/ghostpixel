@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "assemblyscript": "^0.28.20"
+  },
+  "scripts": {
+    "build": "asc wasm/index.ts -o wasm/stego.wasm --runtime stub --optimize",
+    "start": "python3 -m http.server 8000"
+  }
+}

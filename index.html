@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GhostPixel · Image Steganography</title>
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>👻 GhostPixel</h1>
+    <p class="sub">Hide text inside an image using LSB steganography. Runs 100% in your browser (JS + WebAssembly).</p>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="hide">Hide</button>
+      <button class="tab" data-tab="reveal">Reveal</button>
+    </div>
+
+    <section id="hide" class="panel active">
+      <label>1. Choose a cover image (PNG recommended)</label>
+      <input type="file" id="hideFile" accept="image/*" />
+      <p id="capacity" class="hint"></p>
+
+      <label for="secret">2. Secret message</label>
+      <textarea id="secret" rows="4" placeholder="Type your secret here..."></textarea>
+
+      <button id="hideBtn" class="primary">Hide message</button>
+      <p id="hideStatus" class="status"></p>
+
+      <div id="hideResult" class="result" hidden>
+        <img id="hidePreview" alt="Stego image preview" />
+        <a id="download" class="primary link" download="ghostpixel.png">Download PNG</a>
+      </div>
+    </section>
+
+    <section id="reveal" class="panel">
+      <label>Choose a GhostPixel PNG</label>
+      <input type="file" id="revealFile" accept="image/png" />
+      <button id="revealBtn" class="primary">Reveal message</button>
+      <p id="revealStatus" class="status"></p>
+      <pre id="revealOut" class="output" hidden></pre>
+    </section>
+
+    <footer>Always share the result as PNG. JPEG compression destroys hidden bits.</footer>
+  </main>
+
+  <script src="src/app.js"></script>
+</body>
+</html>
